@@ -67,7 +67,7 @@ check_cmd "git"
 check_cmd "zip"
 check_cmd "curl"
 # 检查设备defconfig
-DEFCONFIG_FILE="arch/arm64/configs/vendor/${TARGET_DEVICE}_defconfig"
+DEFCONFIG_FILE="arch/arm64/configs/${TARGET_DEVICE}_defconfig"
 if [ ! -f "${DEFCONFIG_FILE}" ]; then
     log_error "设备${TARGET_DEVICE}的defconfig不存在！可用defconfig：
     $(ls arch/arm64/configs/*_defconfig | sed 's/arch\/arm64\/configs\///g')"
